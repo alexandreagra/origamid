@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="file" id="fileInput" multiple>
+  <button onclick="handleClick()">Enviar</button>
+
+  <script>
+    function handleClick() {
+      const fileInput = document.getElementById("fileInput");
+      const files = fileInput.files;
+
+      const formData = new FormData();
+      formData.append("nome", "Ricardo Lima");
+
+      for (let i = 0; i < files.length; i++) {
+        formData.append("file", files[i]);
+      }
+
+      const options = {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vc2l0ZWFwaS5sb2NhbCIsImlhdCI6MTY4NDkzMjUyNiwibmJmIjoxNjg0OTMyNTI2LCJleHAiOjE2ODU1MzczMjYsImRhdGEiOnsidXNlciI6eyJpZCI6IjIifX19.V_mY_1klUbD88zSrD1cPo2H93N7yc5xnVGJ7x2V2Wpo"
+        },
+      };
+
+      fetch("https://siteapi.local/wp-json/api/operators", formData, options)
+        .then(response => {
+          console.log(response); // Lida com a resposta da requisição
+        })
+        .catch(error => {
+          console.error(error); // Lida com possíveis erros
+        });
+    }
+  </script>
+</body>
+</html>

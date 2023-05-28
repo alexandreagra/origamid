@@ -1,0 +1,45 @@
+h1, h2 {
+    font-size: 4rem;
+}
+
+.primeira {
+    width: 500px;
+}
+
+.segunda {
+    width: 1000px;
+    height: 400px;
+}
+
+.titulo-principal {
+    color: red;
+    animation-name: rotacao2;
+    animation-duration: 2s;
+}
+
+.classe-nova {
+    color: cornflowerblue;
+    animation-name: girando;
+    animation-duration: 3s;
+    
+}
+
+@keyframes girando {
+    from {
+        transform: translateY(1000px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+
+@keyframes rotacao2 {
+    from {
+        transform: translateX(-400px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
