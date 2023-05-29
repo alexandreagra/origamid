@@ -1,32 +1,34 @@
-----------------DISPLAY FLEX: organiza os itens lado a lado ou em uma coluna. O tamanho do item, por padrão, se mantem. 
+FLEX CONTAINER:
+
+DISPLAY FLEX: organiza os itens lado a lado ou em uma coluna. O tamanho do item, por padrão, se mantem.
 
 flex-wrap: wrap - faz com que os itens se encaixem no box. / no-wrap: os itens ultrapassam os limites do box. (pode ser utilizado wrap-reverse, que quebra a linha de baixo pra cima)
 
-flex (propriedade): flex: 1 - os itens se encaixam no box, de maneira que fiquem proporcionalmente do mesmo tamanho em relação aos limites do box. 
+flex (propriedade): flex: 1 - os itens se encaixam no box, de maneira que fiquem proporcionalmente do mesmo tamanho em relação aos limites do box.
 
 flex-direction: define a direção que os itens seguirão dentro do box. (row ou columnm, e ambos podem ser reverse, que inverte a posição dos itens.)
 
-JUSTIFY-CONTENT: 
+JUSTIFY-CONTENT:
 
-flex-start - ajusta a posição dos itens para o início (esquerda do container) 
+flex-start - ajusta a posição dos itens para o início (esquerda do container)
 
-flex-end - ajusta a posição dos itens para o fim (direita do container) 
+flex-end - ajusta a posição dos itens para o fim (direita do container)
 
-center - alinha os itens ao centro do box  
+center - alinha os itens ao centro do box
 
 space-between - ajusta os itens para que preencham o espaço do box de ponta a ponta (esquerda e direita), dando espaço entre eles mas sempre apontando pros extremos
 
-space-around - cria um espaçamento entre os itens, tendo como base o centro do box. 
+space-around - cria um espaçamento entre os itens, tendo como base o centro do box.
 
 -----------------ALIGN-ITENS:
 
-flex-stretch (padrão) - faz com que todos os itens acompanhem, por padrão, o maior deles, tendo como referência o height ex: um item com texto grande, vai ocupar um espaço maior na box e os outros, mesmo que com menos texto, seguirão o padrão de width/height do maior deles. 
+flex-stretch (padrão) - faz com que todos os itens acompanhem, por padrão, o maior deles, tendo como referência o height ex: um item com texto grande, vai ocupar um espaço maior na box e os outros, mesmo que com menos texto, seguirão o padrão de width/height do maior deles.
 
-flex-start - Os itens são alinhados conforme o tamanho deles, sem mudar o tamanho dos mesmos com relação aos outros, tendo como orientação o TOP do box.  
+flex-start - Os itens são alinhados conforme o tamanho deles, sem mudar o tamanho dos mesmos com relação aos outros, tendo como orientação o TOP do box.
 
-flex-end - Os itens são alinhados conforme o tamanho deles, sem mudar o tamanho dos mesmos com relação aos outros, tendo como orientação o BOTTOM do box.  
+flex-end - Os itens são alinhados conforme o tamanho deles, sem mudar o tamanho dos mesmos com relação aos outros, tendo como orientação o BOTTOM do box.
 
-center - Os itens são alinhados ao centro da box, sem mudar seus tamanhos em relação aos outros. 
+center - Os itens são alinhados ao centro da box, sem mudar seus tamanhos em relação aos outros.
 
 baseline - Alinha os itens conforme a "baseline"(linha de base, como por exemplo, o início de um texto. Todos os itens serão alinhados conforme o inicio de uma imagem ou texto).
 
@@ -34,28 +36,38 @@ bônus ALIGN-ITENS: align-itens: center; + justify-content: center, centraliza p
 
 ------------------ALIGN-CONTENT: (para funcionar, o flex-wrap precisa estar "wrap")
 
-stretch (padrão) : faz os conteúdos crescerem e ocupar o máximo do height do box. Estica os itens e vai colocando-os em linhas ou colunas até caber tudo. 
+stretch (padrão) : faz os conteúdos crescerem e ocupar o máximo do height do box. Estica os itens e vai colocando-os em linhas ou colunas até caber tudo.
 
-flex-start: alinha os itens na orientação do TOP da box. 
+flex-start: alinha os itens na orientação do TOP da box.
 
-flex-end: alinha os itens na orientação do BoTTOM da box. 
+flex-end: alinha os itens na orientação do BoTTOM da box.
 
 center: alinha os itens ao centro
 
 space-between: alinha os itens com espaços entre eles na orientação vertical, utilizando os limites da box.
 
-space-around: alinha os itens com espaços entre eles na orientação vertical, utilizando o centro da box como referência, não concentrando o conteúdo nos limites do height, mas sempre crescendo do centro pra o eixo Y. 
+space-around: alinha os itens com espaços entre eles na orientação vertical, utilizando o centro da box como referência, não concentrando o conteúdo nos limites do height, mas sempre crescendo do centro pra o eixo Y.
 
-IMPORTANTE: cuidado com as margens e paddings dos itens contidos numa flex box, pois a propriedade flex não ajusta essas configurações por si só. 
+IMPORTANTE: cuidado com as margens e paddings dos itens contidos numa flex box, pois a propriedade flex não ajusta essas configurações por si só.
 
 
 --------------------FLEX ITEMS
 
 FLEX-GROW:
 
-flex-grow: 0; - os itens são alinhados a partir da ponta do box (esquerda), sem alterar seus tamanhos. 
+flex-grow: 0; - os itens são alinhados a partir da ponta do box (esquerda), sem alterar seus tamanhos.
 
 flex-grow: 1, 2, 3 etc...; - os itens crescem horizontalemente a medida que o grow aumenta, individualmente, dentro da box, podendo cada item ter uma propriedade "grow" diferente conforme o desenvolvedor preferir.
+
+FLEX-BASIS:
+
+Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+
+Quando definimos o flex-grow: 1; e possuímos auto no basis, o valor restante para ocupar o container é distribuído ao redor do conteúdo do flex-item.
+
+FLEX-SHRINK:
+
+Define a capacidade de redução de tamanho do item.
 
 
 
